@@ -38,7 +38,7 @@ app.use(function (req, res, next) {
 
 app.use("/api/users", usersRoutes);
 app.use("/api/posts", postsRoutes);
-app.use("/", () => {
+app.use("/", (req, res, next) => {
   res.status(200).send("Server Running!!");
 });
 
