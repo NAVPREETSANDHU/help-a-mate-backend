@@ -1,7 +1,9 @@
 // database.js
 const { MongoClient } = require("mongodb");
 
-const uri = process.env.MONGO_DB_URL;
+const uri =
+  process.env.MONGO_DB_URL ||
+  "mongodb+srv://navpreet6133:f4HsrQq75JlvPVRV@cluster0.th18mna.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
